@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://floor-ukr.top/sitemap.xml
