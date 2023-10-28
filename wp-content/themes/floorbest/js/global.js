@@ -685,12 +685,12 @@ jQuery(function($) {
 /*    $('.product-button-wrap .button, .product-detail-amount .button').on('click', function() {
         var $this = $(this);
 
-        $this.append('<img class="add-to-cart-loader" src="/wp-content/themes/floorbest/img/icon-loader2.svg" alt="">');
+        $this.append('<img class="add-to-cart-loader" src="/wp-content/themes/applegoodimg/icon-loader2.svg" alt="">');
         $this.addClass('loading');
 
         setTimeout(function() {
             $this.find('.add-to-cart-loader').remove();
-            $this.append('<img class="add-to-cart-loader" src="/wp-content/themes/floorbest/img/icon-checked.svg" alt="">');
+            $this.append('<img class="add-to-cart-loader" src="/wp-content/themes/applegoodimg/icon-checked.svg" alt="">');
 
             setTimeout(function() {
                 $this.removeClass('loading');
@@ -1457,7 +1457,7 @@ $('#ajax-filter-section').on('click', '.filter .custom-filter .color-list li', f
 		stop_ajax_cart = 2;
 		is_add_cart = 'added';
 		//$('.cart_count_loading').css('opacity', '1');
-		$(this).append('<img class="add-to-cart-loader" src="/wp-content/themes/floorbest/img/icon-loader2.svg" alt="">');
+		$(this).append('<img class="add-to-cart-loader" src="/wp-content/themes/applegoodimg/icon-loader2.svg" alt="">');
 	});
 	//=== оновлення кількості товарів в міні-карт (цифра)
 	$(document).ajaxComplete(function(){
@@ -1471,7 +1471,7 @@ $('#ajax-filter-section').on('click', '.filter .custom-filter .color-list li', f
 				dataType: 'json',
 				complete: function(response) {
 					$('.ajax_add_to_cart').find('.add-to-cart-loader').remove();
-					//$(this).append('<img class="add-to-cart-loader" src="/wp-content/themes/floorbest/img/icon-checked.svg" alt="">');
+					//$(this).append('<img class="add-to-cart-loader" src="/wp-content/themes/applegoodimg/icon-checked.svg" alt="">');
 					//console.log('add-to-cart-loader removed');
 					var json_cart = response.responseJSON;
 					$('.shopping-cart').addClass('not-empty-cart');
@@ -1593,8 +1593,8 @@ $('#ajax-filter-section').on('click', '.filter .custom-filter .color-list li', f
 
 
     $(document).on('click', '.product-count .cin-increment', function(e) {
-    	$(this).parent().append('<img class="mini-cart-loader" src="/wp-content/themes/floorbest/img/ajaxloader.gif" alt="">');
-      	$('.cart-total-title').append('<img class="mini-cart-loader-cart-total" src="/wp-content/themes/floorbest/img/ajaxloader.gif" alt="">');
+    	$(this).parent().append('<img class="mini-cart-loader" src="/wp-content/themes/applegoodimg/ajaxloader.gif" alt="">');
+      	$('.cart-total-title').append('<img class="mini-cart-loader-cart-total" src="/wp-content/themes/applegoodimg/ajaxloader.gif" alt="">');
          var $input = $(this).siblings('.cin-input'),
             val = parseInt($input.val()),
             max = parseInt($input.attr('max')),
@@ -1633,8 +1633,8 @@ $('#ajax-filter-section').on('click', '.filter .custom-filter .color-list li', f
      		productId       = that.data('cart-item-key'),
       		cart_count_ajax = parseInt($('.shopping-cart .goods-amount').text()),
       		quantity        = parseInt(that.closest('.quantity').find('.cin-input').val()) + 1;
-      		$(this).parent().append('<img class="mini-cart-loader" src="/wp-content/themes/floorbest/img/ajaxloader.gif" alt="">');
-      		$('.cart-total-title').append('<img class="mini-cart-loader-cart-total" src="/wp-content/themes/floorbest/img/ajaxloader.gif" alt="">');
+      		$(this).parent().append('<img class="mini-cart-loader" src="/wp-content/themes/applegoodimg/ajaxloader.gif" alt="">');
+      		$('.cart-total-title').append('<img class="mini-cart-loader-cart-total" src="/wp-content/themes/applegoodimg/ajaxloader.gif" alt="">');
 		$.ajax({
 			type: "POST",
 			url: ajaxurl,
@@ -1777,12 +1777,12 @@ $(document).on('click', '.fl-add-to-compare', function () {
     if(!exists){
     	list.add(JSON.stringify(prod_id));
     	$('.compare-btn').addClass('active');
-        $this.append('<img class="add-to-cart-loader" src="/wp-content/themes/floorbest/img/icon-loader2.svg" alt="">');
+        $this.append('<img class="add-to-cart-loader" src="/wp-content/themes/applegoodimg/icon-loader2.svg" alt="">');
         $this.addClass('loading');
 
         setTimeout(function() {
             $this.find('.add-to-cart-loader').remove();
-            //$this.append('<img class="add-to-cart-loader" src="/wp-content/themes/floorbest/img/icon-checked.svg" alt="">');
+            //$this.append('<img class="add-to-cart-loader" src="/wp-content/themes/applegoodimg/icon-checked.svg" alt="">');
             $this.find('.add-to-compare-check').addClass('compare-active');
             var compare_array = Cookies.getJSON('comparelist');
     		$('.compare-btn .compare-count').text(compare_array.length);
@@ -1914,7 +1914,7 @@ $(document).on('click', '.project-cat', function (e) {
 
 
 	$(document).on('click', '.checkout-button-block .checkout_submit', function() {
-		$(this).parent().append('<img class="checkout-submit-loader" src="/wp-content/themes/floorbest/img/ajaxloader.gif" alt="">');
+		$(this).parent().append('<img class="checkout-submit-loader" src="/wp-content/themes/applegoodimg/ajaxloader.gif" alt="">');
 		setTimeout(function() {
 			$(document).find('.checkout-submit-loader').remove();
         }, 2500);
